@@ -1,26 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-<style>
-	div {
-		width:80vw;
-		height:80vh;
-	 }
-	 img {
-		max-width:100%;
-		height:auto;
-		max-height:100%;
-	 }
-</style>
-</head>
-<body>
-	<div>
-	<h3>514.streetracing.org</h3>
-	<img src="Photo1.jpg"/>
-</div>
+<html>
 
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<meta referece="https://codesalad.dev/blog/pop-up-image-lightbox-in-pure-css-25#_"/>
+
+	<style>
+		div.gallery {
+			border: 1px solid #ccc;
+		}
+
+		div.gallery:hover {
+			border: 1px solid #777;
+		}
+
+		div.gallery img {
+			width: 100%;
+			height: auto;
+		}
+
+		div.desc {
+			padding: 15px;
+			text-align: center;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.responsive {
+			padding: 0 6px;
+			float: left;
+			width: 24.99999%;
+		}
+
+		@media only screen and (max-width: 750px) {
+			.responsive {
+				width: 49.99999%;
+				margin: 6px 0;
+			}
+		}
+
+		@media only screen and (max-width: 500px) {
+			.responsive {
+				width: 100%;
+			}
+		}
+
+		.clearfix:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.lightbox {
+			/* Default to hidden */
+			display: none;
+
+			/* Overlay entire screen */
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			/* A bit of padding around image */
+			padding: 1em;
+
+			/* Translucent background */
+			background: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Unhide the lightbox when it's the target */
+		.lightbox:target {
+			display: block;
+		}
+
+		.lightbox div {
+			/* Full width and height */
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			/* Size and position background image */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	</style>
+</head>
+
+<body>
+<!-- https://svgbox.net/iconset/loaders -->
+	<img src="https://s2.svgbox.net/loaders.svg?ic=circles&color=da1b1b" width="32" height="32">
+<br/>
+
+	<div class="responsive">
+		<div class="gallery">
+			<a href="#some-id">
+				<img src="ag1.jpg">
+			</a>
+		</div>
+	</div>
+
+	<div class="responsive">
+		<div class="gallery">
+			<a href="#some-id">
+				<img src="ag1.jpg">
+			</a>
+		</div>
+	</div>
+
+	<div class="responsive">
+		<div class="gallery">
+			<a href="#some-id">
+				<img src="ag1.jpg">
+			</a>
+		</div>
+	</div>
+
+	<div class="responsive">
+		<div class="gallery">
+			<a href="#some-id">
+				<img src="ag1.jpg">
+			</a>
+		</div>
+	</div>
+
+	<div class="responsive">
+		<div class="gallery">
+			<a href="#some-id">
+				<img src="ag1.jpg">
+			</a>
+		</div>
+	</div>
+
+	<div class="responsive">
+		<div class="gallery">
+			<a href="#some-id">
+				<img src="ag1.jpg">
+			</a>
+		</div>
+	</div>
+
+	<div class="responsive">
+		<div class="gallery">
+			<a href="#some-id">
+				<img src="ag1.jpg">
+			</a>
+		</div>
+	</div>
+
+	<!-- Include lightbox (position on page doesn't matter) -->
+	<a href="#" class="lightbox" id="some-id">
+		<div style="background-image:url('Photo1.jpg')"></div>
+	</a>
+
+	<div class="clearfix"></div>
 </body>
+
 </html>
