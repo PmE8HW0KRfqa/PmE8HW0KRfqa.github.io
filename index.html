@@ -4,95 +4,11 @@
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-<!--
-<meta referece="https://codesalad.dev/blog/pop-up-image-lightbox-in-pure-css-25#_"/>
 
--->
-	
-	<style>
-		div.gallery {
-			border: 1px solid #ccc;
-		}
+	<link rel="stylesheet" href="lightbox.css">
+	<link rel="stylesheet" href="img.css">
 
-		div.gallery:hover {
-			border: 1px solid #777;
-		}
 
-		div.gallery img {
-			width: 100%;
-			height: auto;
-		}
-
-		div.desc {
-			padding: 15px;
-			text-align: center;
-		}
-
-		* {
-			box-sizing: border-box;
-		}
-
-		.responsive {
-			padding: 0 6px;
-			float: left;
-			width: 24.99999%;
-		}
-
-		@media only screen and (max-width: 750px) {
-			.responsive {
-				width: 49.99999%;
-				margin: 6px 0;
-			}
-		}
-
-		@media only screen and (max-width: 500px) {
-			.responsive {
-				width: 100%;
-			}
-		}
-
-		.clearfix:after {
-			content: "";
-			display: table;
-			clear: both;
-		}
-
-		.lightbox {
-			/* Default to hidden */
-			display: none;
-
-			/* Overlay entire screen */
-			position: fixed;
-			z-index: 999;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-
-			/* A bit of padding around image */
-			padding: 1em;
-
-			/* Translucent background */
-			background: rgba(0, 0, 0, 0.8);
-		}
-
-		/* Unhide the lightbox when it's the target */
-		.lightbox:target {
-			display: block;
-		}
-
-		.lightbox div {
-			/* Full width and height */
-			display: block;
-			width: 100%;
-			height: 100%;
-
-			/* Size and position background image */
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-		}
-	</style>
 </head>
 
 <body>
@@ -101,64 +17,52 @@
 	<img src="https://s2.svgbox.net/loaders.svg?ic=circles&color=da1b1b" width="32" height="32">
 
 	-->
-<br/>
 
-	<div class="responsive">
-		<div class="gallery">
-			<a href="#some-id">
-				<img src="ag1.jpg">
-			</a>
-		</div>
+
+	<!-- Photo Grid -->
+<div class="row"> 
+	<div class="column">
+	<a href="#some-id"><img src="1.jpg" style="width:100%"></a>
+	<a href="#some-id">  <img src="1.jpg" style="width:100%"></a>
+		<a href="#some-id"> <img src="2.jpg" style="width:100%"></a>
+			<a href="#some-id"> <img src="4.jpg" style="width:100%"></a>
+				<a href="#some-id">  <img src="5.jpg" style="width:100%"></a>
+					<a href="#some-id">  <img src="2.jpg" style="width:100%"></a>
+						<a href="#some-id">  <img src="3.jpg" style="width:100%"></a>
 	</div>
-
-	<div class="responsive">
-		<div class="gallery">
-			<a href="#some-id">
-				<img src="ag1.jpg">
-			</a>
-		</div>
+	<div class="column">
+		<img src="3.jpg" style="width:100%"></a>
+		<img src="1.jpg" style="width:100%"></a>
+		  <img src="1.jpg" style="width:100%">
+		  <img src="2.jpg" style="width:100%">
+		  <img src="4.jpg" style="width:100%">
+		  <img src="5.jpg" style="width:100%">
+		  <img src="2.jpg" style="width:100%">
+	</div>  
+	<div class="column">
+		<img src="2.jpg" style="width:100%">
+		<img src="3.jpg" style="width:100%"></a>
+		<img src="1.jpg" style="width:100%"></a>
+		  <img src="1.jpg" style="width:100%">
+		  <img src="4.jpg" style="width:100%">
+		  <img src="5.jpg" style="width:100%">
+		  <img src="2.jpg" style="width:100%">
 	</div>
-
-	<div class="responsive">
-		<div class="gallery">
-			<a href="#some-id">
-				<img src="ag1.jpg">
-			</a>
-		</div>
+	<div class="column">
+		<img src="3.jpg" style="width:100%"></a>
+		<img src="1.jpg" style="width:100%"></a>
+		  <img src="1.jpg" style="width:100%">
+		  <img src="2.jpg" style="width:100%">
+		  <img src="4.jpg" style="width:100%">
+		  <img src="5.jpg" style="width:100%">
+		  <img src="2.jpg" style="width:100%">
 	</div>
+  </div>
 
-	<div class="responsive">
-		<div class="gallery">
-			<a href="#some-id">
-				<img src="ag1.jpg">
-			</a>
-		</div>
-	</div>
 
-	<div class="responsive">
-		<div class="gallery">
-			<a href="#some-id">
-				<img src="ag1.jpg">
-			</a>
-		</div>
-	</div>
 
-	<div class="responsive">
-		<div class="gallery">
-			<a href="#some-id">
-				<img src="ag1.jpg">
-			</a>
-		</div>
-	</div>
 
-	<div class="responsive">
-		<div class="gallery">
-			<a href="#some-id">
-				<img src="ag1.jpg">
-			</a>
-		</div>
-	</div>
-
+	
 	<!-- Include lightbox (position on page doesn't matter) -->
 	<a href="#" class="lightbox" id="some-id">
 		<div style="background-image:url('Photo1.jpg')"></div>
